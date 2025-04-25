@@ -17,7 +17,7 @@ This project was made on Google Colab because of lack of local resources. In ord
    ```
   * **Download the main Python script (app.py):** This is the core script that runs the application, interacts with the vector store, and fetches the building codes based on user queries.
    ``` bash
-   !wget https://github.com/Cicada98/Building-Permit-Checker/raw/main/app.py
+   !wget https://raw.githubusercontent.com/Cicada98/Building-Permit-Checker/main/app.py
    ```
   * **Install ollama embeddings and llmma3.2:** Open the terminal using colab xterm and run the following commands in the terminal.
    ``` bash
