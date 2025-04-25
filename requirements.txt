@@ -1,6 +1,6 @@
 streamlit
 pypdf
-lancgchain_community
+langchain_community
 langchain
 langchain-core
 colab-xterm
