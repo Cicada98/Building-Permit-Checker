@@ -29,4 +29,10 @@ This project was made on Google Colab because of lack of local resources. In ord
    ollama pull nomic-embed-text
    ollama pull llama3.2
    ```
-
+ * **Start the Strealit app:** Uing LocalTunnel (npx localtunnel) instead to expose the Streamlit app in Colab. Copy paste the following commands in order:
+  ``` bash
+   !wget -q -O - ipv4.icanhazip.com # this will give an IP address
+   !streamlit run app.py & npx localtunnel --port 8501 #default port
+  ```
+The Last step will give you a link where you paste the IP address given by the ```!wget``` command. This will redirect you to the streamlit app.
+   
