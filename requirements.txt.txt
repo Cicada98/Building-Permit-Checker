@@ -1,0 +1,12 @@
+streamlit
+pypdf
+lancgchain_community
+langchain
+langchain-core
+colab-xterm
+langchain-ollama
+faiss-cpu
+transformers
+sentence-transformers
+ollama
+colabcode
