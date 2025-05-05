@@ -71,5 +71,5 @@ iface = gr.Interface(
     description="Ask questions about Ontario building regulations and get AI-generated expert responses based on official compendium."
 )
 
-iface.launch()
+iface.launch(share=True)
 
