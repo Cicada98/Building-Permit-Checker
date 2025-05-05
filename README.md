@@ -6,18 +6,18 @@ The repository contains two main files.
   * app.py - This is the script which which contains whole code
 ## Steps to run this Repository on Google Colab
 This project was made on Google Colab because of lack of local resources. In order to run this repository, run the following commands in order in a new colab notebook with a gpu runtime:
-  *  **Transfer the vector store file from GitHub to the Colab local directory:** This will download and unzip the vector store (faiss_index.zip), which contains the necessary data for querying Ontario building codes.
+  *  **Clone this repository onto your local colab directory:**
    ```bash
-   !wget https://github.com/Cicada98/Building-Permit-Checker/raw/main/faiss_index.zip
+   !git clone https://github.com/Cicada98/Building-Permit-Checker.git
+   ```
+  * **Change the PWD to the project folder and unzip the vector store file:** The vector store file (faiss_index.zip) contains the necessary embedded data for querying Ontario building codes.
+   ``` bash
+   %cd Building-Permit-Checker # change your present working directory to this
    !unzip faiss_index.zip
    ```
   * **Install the necessary requirements:** Use the following command to install all dependencies required to run the app. This ensures that all libraries and tools are up-to-date.
    ``` bash
-   !pip install -qU -r https://raw.githubusercontent.com/Cicada98/Building-Permit-Checker/main/requirements.txt
-   ```
-  * **Download the main Python script (app.py):** This is the core script that runs the application, interacts with the vector store, and fetches the building codes based on user queries.
-   ``` bash
-   !wget https://raw.githubusercontent.com/Cicada98/Building-Permit-Checker/main/app.py
+   !pip install -qU -r requirements.txt
    ```
   * **Install ollama embeddings and llmma3.2:** Open the terminal using colab xterm and run the following commands in the terminal.
    ``` bash
@@ -29,10 +29,9 @@ This project was made on Google Colab because of lack of local resources. In ord
    ollama pull nomic-embed-text
    ollama pull llama3.2
    ```
- * **Start the Strealit app:** Uing LocalTunnel (npx localtunnel) instead to expose the Streamlit app in Colab. Copy paste the following commands in order:
+ * **Start the Gradio app:**
   ``` bash
-   !wget -q -O - ipv4.icanhazip.com # this will give an IP address
-   !streamlit run app.py & npx localtunnel --port 8501 #default port
+   !python app.py
   ```
-The Last step will give you a link where you paste the IP address given by the ```!wget``` command. This will redirect you to the streamlit app.
+The Last step will give you a link which you can use as a public link which will work until the colab script is running.
    
